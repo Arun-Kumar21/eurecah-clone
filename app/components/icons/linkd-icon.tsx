@@ -1,6 +1,6 @@
 import React from "react";
 
-const Icon3 = () => {
+const LinkdIcon = () => {
   return (
     <div>
       <svg
@@ -26,4 +26,4 @@ const Icon3 = () => {
   );
 };
 
-export default Icon3;
+export default LinkdIcon;

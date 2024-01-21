@@ -6,9 +6,9 @@ import { anim, height, opacity, popOut, slide, translate } from "../../anim/anim
 import Link from "next/link";
 
 import styles from "./styles.module.scss";
-import Icon1 from "../../icons/icon1";
-import Icon2 from "../../icons/icon2";
-import Icon3 from "../../icons/icon3";
+import Icon1 from "../../icons/twiter-icon";
+import Icon2 from "../../icons/insta-icon";
+import Icon3 from "../../icons/linkd-icon";
 import { MoveUpRight } from "lucide-react";
 
 const links = [
