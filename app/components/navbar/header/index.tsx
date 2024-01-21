@@ -1,7 +1,7 @@
 "use client";
 import React, { ReactNode } from "react";
 
-import { motion } from "framer-motion";
+import { MotionProps, motion } from "framer-motion";
 import { anim, height, opacity, popOut, slide, translate } from "../../anim/anim";
 import Link from "next/link";
 
@@ -31,6 +31,17 @@ const links = [
 ];
 
 const Header = ({ toggleNav }: { toggleNav: () => void }) => {
+
+  const hover:MotionProps = {
+    variants : {
+      initial : { y : 0},
+      hover : { y : "-75%"},
+    },
+    initial : "initial",
+    whileHover : "hover",
+    transition : { duration : 0.2}
+  }
+
   const getChars = (word: string) => {
     let chars: ReactNode[] = [];
   
@@ -63,15 +74,20 @@ const Header = ({ toggleNav }: { toggleNav: () => void }) => {
           {links.map((link, index) => {
             const { name, url } = link;
             return (
-              <Link href={url} key={index}>
-                <p className={styles.item} onClick={() => toggleNav()}>
-                  {getChars(name)}
-                </p>
+              <Link href={url} key={index} className="overflow-hidden pb-4 my-4">
+                <motion.div className= "inline-block" {...hover}>
+                  <motion.p className={styles.item} onClick={() => toggleNav()} >
+                    {getChars(name)}
+                  </motion.p>
+                  <motion.p className={styles.item} onClick={() => toggleNav()}>
+                    {getChars(name)}
+                  </motion.p>
+                </motion.div>
               </Link>
             );
           })}
 
-          <motion.div className="flex lg:hidden mt-4" {...anim(opacity)}>
+          <motion.div className="flex lg:hidden my-4" {...anim(opacity)}>
             <div className={styles.navItem}>
               <Link
                 href="https://github.com/Arun-Kumar21"

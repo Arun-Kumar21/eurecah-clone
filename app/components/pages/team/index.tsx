@@ -7,38 +7,43 @@ import { Minus } from "lucide-react";
 
 import PrimaryBtn from "../../primary-btn";
 
-import Image3 from "@/public/assets/asset 15.png";
-import Image1 from "@/public/assets/asset 13.png";
-import Image2 from "@/public/assets/asset 14.webp";
+import Image1 from "@/public/assets/asset 26.png"
+import Image3 from "@/public/assets/asset 28.png"
+import Image2 from "@/public/assets/asset 27.png"
+import Footer from "../../footer";
 
 const imageClips = [
   {
     image: Image1,
-    title: "uru sports",
+    title: "comiccon la",
     text: "001",
     index: 0,
   },
   {
     image: Image2,
-    title: "pepsico",
+    title: "organic olivia",
     text: "002",
     index: 1,
   },
   {
     image: Image3,
-    title: "era carbon",
+    title: "pani water",
     text: "003",
     index: 2,
   },
 ];
 
 const aboutUs = [
-  "Through strategic insight and creative prowess,",
-  "we craft unique brand identities, compelling",
-  "products, and immersive web experiences."  
+  "We're a bunch of creatives and tech experts.",
+  "From design to coding, we've got a mix that's",
+  "as diverse as us. With a small team in the US,",
+  "UK and Latin America, we're a group that",
+  "thrives on collaboration and a healthy dose of",
+  "fun. Expect lots of enthusiasm and attention to",
+  "detail when working with us.",
 ];
 
-const About2 = () => {
+const Team = () => {
   const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
@@ -78,13 +83,10 @@ const About2 = () => {
   };
 
   return (
-    <div className="w-screen text-white h-full bg-black">
-      <div className="pt-[5vh] lg:pt-[5vh]">
-        <div className="px-8 lg:px-16 grid-container2">
-          <div className=" flex items-center justify-start  index2">
-          <span className="text-7xl text-white lg:text-9xl">
-              <Minus size={48} />
-            </span>
+    <div className="w-screen text-white h-full relative">
+      <div className="pt-[5vh] lg:pt-[15vh]">
+        <div className="px-8 lg:px-16 grid-container1">
+          <div className=" flex items-center justify-start  index">
             <div className="overflow-hidden flex" ref={indexContainer}>
               <motion.span
                 className="text-7xl text-white font-bold lg:text-[150px]"
@@ -102,15 +104,18 @@ const About2 = () => {
                 animate={isIndexInView ? "enter" : "exit"}
                 custom={2}
               >
-                2
+                3
               </motion.span>
             </div>
+            <span className="text-7xl text-white lg:text-9xl">
+              <Minus size={48} />
+            </span>
           </div>
 
-          <div className="h-full lg:block content2" ref={paraContainer}>
-            <div className="mt-8">
+          <div className="h-full lg:block content" ref={paraContainer}>
+            <div className="mt-12">
               <p className="font-medium text-xs uppercase opacity-60 text-white lg:text-base">
-                [method]
+                [TEAM]
               </p>
             </div>
 
@@ -130,17 +135,17 @@ const About2 = () => {
               ))}
             </div>
 
-            <div className="my-12 md:mt-6 md:mb-2">
-              <PrimaryBtn  title={"view our work"}/>
+            <div className="my-6">
+              <PrimaryBtn />
             </div>
           </div>
 
-          <div className="h-[17rem] w-[16rem] mt-4 clip-area2">
+          <div className="lg:float-left h-[16rem] w-[17rem] mt-4 mb-20 clip-area">
             <div className="h-full w-full">
               <Image
                 src={imageClips[imageIndex].image}
                 alt="image"
-                className="w-[16rem] h-[17rem] object-cover object-center"
+                className="w-[17rem] h-[16rem] object-fill"
               />
             </div>
             <div className="flex items-center justify-between text-sm uppercase">
@@ -155,10 +160,8 @@ const About2 = () => {
           </div>
         </div>
       </div>
-
-      <div></div>
     </div>
   );
 };
 
-export default About2;
+export default Team;

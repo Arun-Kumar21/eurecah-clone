@@ -7,7 +7,6 @@ import { MoveUpRight } from "lucide-react";
 import Logo from "../logo/logo";
 import styles from "./styles.module.scss";
 import Header from "./header";
-import Link from "next/link";
 import PrimaryBtn from "../primary-btn";
 
 const Navbar = () => {

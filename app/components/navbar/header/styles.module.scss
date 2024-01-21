@@ -8,6 +8,10 @@
   display: flex;
   transform: scaleY(1.2);
   overflow: hidden;
+
+  &:nth-child(2){
+    transform: translateY(50%);
+  }
   
   @media (min-width: 1024px) {
     font-size: 6rem;
