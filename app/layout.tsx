@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
+import localFont from 'next/font/local'
+
+const heleveticaNeue = localFont({src : "./font/Light.woff"})
 
 export const metadata: Metadata = {
   title: 'Eurecah | Creative Agency',
@@ -14,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={heleveticaNeue.className}>
         {children}
       </body>
     </html>
