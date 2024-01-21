@@ -1,9 +1,10 @@
-import React from "react";
+'use client'
+import React, { useEffect, useState } from "react";
 
 import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
 
-const Loading = () => {
+const Loading = ({dimensions} : any) => {
 
   const anim = {
     initial: {
@@ -30,13 +31,14 @@ const Loading = () => {
     return a;
   };
 
-  const getBlock = () => {
-    const { innerWidth, innerHeight } = window;
-    const blockSize = Math.ceil(innerWidth * 0.1);
-    const amountOfBlocks = Math.ceil(innerHeight / blockSize);
-    const delay = shuffle([...Array(amountOfBlocks)].map((_, i) => i));
 
-    console.log(delay);
+  const getBlock = () => {
+    const { width, height } = dimensions;
+    const blockSize = Math.ceil(width * 0.1);
+
+    console.log(width , height, blockSize)
+    const amountOfBlocks = Math.ceil(height / blockSize);
+    const delay = shuffle([...Array(amountOfBlocks)].map((_, i) => i));
 
     return delay.map((delay: number, i: number) => {
       return (

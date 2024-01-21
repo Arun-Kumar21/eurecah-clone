@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import Lenis from "@studio-freight/lenis";
 import { motion , AnimatePresence, LayoutGroup } from "framer-motion";
@@ -17,6 +17,15 @@ import Footer from "./components/footer";
 import Loading from "./loading";
 
 export default function Home() {
+  const [dimensions, setDimensions] = useState({width:0, height: 0});
+
+  const updateDimensions = () => {
+    const { innerWidth, innerHeight } = window;
+    setDimensions({width: innerWidth, height: innerHeight})
+  }
+
+
+
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -26,21 +35,24 @@ export default function Home() {
     }
 
     requestAnimationFrame(raf);
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    updateDimensions();
+    window.addEventListener('resize', updateDimensions);
+    return () => window.removeEventListener('resize', updateDimensions)
   }, []);
 
   const [loading, setLoading] = React.useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
 
   return (
     <LayoutGroup >
       <AnimatePresence mode="wait">
       {loading ? (
-        <Loading />
+        dimensions.height > 0 && <Loading dimensions={dimensions}/> 
       ) : (
         <div>
           <motion.main className="h-full z-20 relative" layout>
