@@ -16,18 +16,14 @@ Explore the future of web development with the Eurecah Clone project. This clone
 
 -  **Modern Web Development Showcase:**  - Explore the latest trends and techniques in web 	development. - Demonstrates state-of-the-art design principles.
 
-<div align="center">
-	 ![featured2](https://github.com/Arun-Kumar21/eurecah-clone/assets/135523348/76417807-b512-4da7-83cb-43be3e52feea)
 
-</div>
+[![featured2](https://github.com/Arun-Kumar21/eurecah-clone/assets/135523348/76417807-b512-4da7-83cb-43be3e52feea)]()
 
 <br/>
 
 - **Awesome Hero Section:**  - Engage users with a visually stunning hero section. - Utilizes impactful imagery and dynamic elements.
-<div align="center">
-  ![hero](https://github.com/Arun-Kumar21/eurecah-clone/assets/135523348/438c522b-340c-4f90-a1b7-4b1669d44859)
 
-</div>
+[![hero](https://github.com/Arun-Kumar21/eurecah-clone/assets/135523348/438c522b-340c-4f90-a1b7-4b1669d44859)]()
 
 <br/>
 
@@ -37,10 +33,9 @@ Explore the future of web development with the Eurecah Clone project. This clone
 
 -  **Featured Section:**  - Showcase key features or highlights of the website. - Utilize interactive elements for an enhanced user experience.
 
-<div align="center">
-  ![featured](https://github.com/Arun-Kumar21/eurecah-clone/assets/135523348/63890ab2-7d09-40df-a775-0b79d7b2d539)
+[![featured](https://github.com/Arun-Kumar21/eurecah-clone/assets/135523348/63890ab2-7d09-40df-a775-0b79d7b2d539)]()
 
-</div>
+
 
 ## Installation
 
